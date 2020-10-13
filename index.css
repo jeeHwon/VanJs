@@ -1,17 +1,12 @@
 body {
     background-color: whitesmoke;
     text-align: center;
+    color:#55efc4;
 }
 .btn{
     cursor: pointer;
 }
 
-
-
-body {
-    color: #55efc4;
-
-}
 
 .clicked {
     color: #55efc4;
@@ -44,5 +39,30 @@ body {
     height : 100%;
     z-index: -1;
     animation: fadeIn 0.5s linear;
+
+}
+
+h5{
+    color:#333333
+}
+
+h5 span:nth-child(1) {
+    color:#ea4235;
+}
+h5 span:nth-child(2) {
+    color:#fabc05;
+}
+h5 span:nth-child(3) {
+    color:#4286f5;
+}
+h5 span:nth-child(4) {
+    color:#34a853;
+}
+.search-bar{
+    width:400px;
+}
+
+li span:nth-child(2){
+    padding-left: 10px
 
 }
