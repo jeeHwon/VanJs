@@ -3,6 +3,9 @@ body {
     text-align: center;
     color:#55efc4;
 }
+.j-title{
+    color:#333333;
+}
 .btn{
     cursor: pointer;
 }
