@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"/>
+    <title>myBook</title>
+</head>
+
+<body>
+    <h1>Searching books</h1>
+    <form class="js-form">
+        <input type="text" placeholder="What is your book"/>
+    </form>
+    <h2 class="js-book"></h2>
+    
+
+
+
+    <p></p>
+    <script src="book.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query : "칼의노래" },
+            headers: {Authorization: "KakaoAK 104c34e80968314ecfdf121f853d662f"}
+        })
+            .done(function (msg) {
+                console.log(msg.documents[0].title);
+                console.log(msg.documents[0].thumbnail);
+                $( "p" ).append( "<strong>"+msg.documents[0].title+"</strong>" );
+                $( "p" ).append( "<img src= '"+msg.documents[0].thumbnail+"'/>" );
+            });
+    </script>
+    
+</body>
+
+</html>
