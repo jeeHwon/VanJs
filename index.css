@@ -2,7 +2,8 @@ body {
     background-color:#2F2F2F;
     text-align: center;
     color: white;
-  
+    font-family: 'IBM Plex Mono', monospace;
+
 }
 .logo {
     width: 300px;
@@ -63,3 +64,4 @@ h5 span:nth-child(4) {
 li span:nth-child(2){
     padding-left: 10px
 }
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
