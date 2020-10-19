@@ -1,7 +1,13 @@
 body {
-    background-color: whitesmoke;
+    background-color:#2F2F2F;
     text-align: center;
-    color:#55efc4;
+    color: white;
+  
+}
+.logo {
+    width: 300px;
+    height: 300px;
+
 }
 .j-title{
     color:#55efc4;
@@ -37,7 +43,7 @@ body {
     animation: fadeIn 0.5s linear;
 }
 h5{
-    color:#333333
+    color:white
 }
 h5 span:nth-child(1) {
     color:#ea4235;
@@ -52,7 +58,7 @@ h5 span:nth-child(4) {
     color:#34a853;
 }
 .search-bar{
-    width:400px;
+    width:300px;
 }
 li span:nth-child(2){
     padding-left: 10px
