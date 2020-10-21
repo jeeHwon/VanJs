@@ -11,8 +11,9 @@
 <body>
     <h1>Searching books</h1>
     <form class="js-form">
-        <input type="text" placeholder="What is your book"/>
+        <input type="text" id="form1" value=" " placeholder="What is your book"/>
     </form>
+    <button onclick="searchingBook()">검색</button>
     <h2 class="js-book"></h2>
     
 
@@ -21,10 +22,12 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script>
+        function searchingBook(){
+        var formData = document.getElementById("form1").value;
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query : "칼의노래" },
+            data: { query : formData },
             headers: {Authorization: "KakaoAK 104c34e80968314ecfdf121f853d662f"}
         })
             .done(function (msg) {
@@ -33,6 +36,7 @@
                 $( "p" ).append( "<strong>"+msg.documents[0].title+"</strong>" );
                 $( "p" ).append( "<img src= '"+msg.documents[0].thumbnail+"'/>" );
             });
+        }
     </script>
     
 </body>
