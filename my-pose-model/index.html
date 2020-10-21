@@ -53,14 +53,23 @@
             await predict();
             window.requestAnimationFrame(loop);
         }
-    
+        var status = "normal"
+
         async function predict() {
             // Prediction #1: run input through posenet
             // estimatePose can take in an image, video or canvas html element
             const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
             // Prediction 2: run input through teachable machine classification model
             const prediction = await model.predict(posenetOutput);
-    
+            if( prediction[0].probability.toFixed(2)==1.00){
+                if(status=="nose"){
+                    var audio = new Audio('nose.mp3');
+                    audio.play();
+                }
+                status = "normal"
+            } else if (prediction[1].probability.toFixed(2)==1.00){
+                status = "nose"
+            }
             for (let i = 0; i < maxPredictions; i++) {
                 const classPrediction =
                     prediction[i].className + ": " + prediction[i].probability.toFixed(2);
