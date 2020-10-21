@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form test</title>
+</head>
+<!--form : 사용자가 입력하는 입력양식-->
+<!--<form method="전송방식" action="목적지" name=폼이름></form>-->
+<!--method-->
+<!--1) get방식-->
+<!--https://www.bobaedream.co.kr/cyber/CyberCar_view.php?no=733688&gubun=I-->
+<!--https://도메인?변수1=값1&변수2=값2&변수3=값3-->
+<!--https://도메인?id=green&ps=1234&hp=01099991234-->
+<!--2) post방식-->
+<!--url 상에 정보 표시 되지 않고 헤더의 바디에 담겨서 전송된다-->
+<!--보안상 크게 다르진 않다-->
+<body>
+<table width="800" >
+    <form name="myform" action="1015-1.html">
+        <tr>
+            <!--labal : input 태그 설명-->
+            <td width="20%">
+                <label for="userid">회원아이디</label>
+            </td>
+            <td width="80%"><input type="text" name="userid" maxlength="10" id="userid"></td>
+        </tr>
+        <tr>
+            <td><label for="pw1">비밀번호</label></td>
+            <td><input type="password" name="pw" id="pw1"></td>
+        </tr>
+        <tr>
+            <td>사진</td>
+            <td><input type="file" name="photo"></td>
+        </tr>
+        <tr>
+            <td>성별</td>
+            <td><!--name이 같아야 같은 속성으로 둘중 하나만 선택 가능-->
+                <input type="radio" name="gender" value="1">남자
+                <input type="radio" name="gender" checked value="2">여자
+            </td>
+        </tr>
+        <tr>
+            <td>취미</td>
+            <td>
+                <input type="checkbox" name="hobby" value="m">등산
+                <input type="checkbox" name="hobby" value="f">낚시
+                <input type="checkbox" name="hobby" value="e" checked>기타
+            </td>
+        </tr>
+        <tr>
+            <td>자기소개</td>
+            <td>
+                <textarea name="info" cols="50" rows="5">간략히 입력하세요</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>좋아하는음식</td>
+            <td>
+                <select name="food">
+                    <option value="ff">선택하세요</option>
+                    <option value="f1">김밥</option>
+                    <option value="f2">스시</option>
+                    <option value="f3">돈까스</option>
+                    <option value="f4">파스타</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>주민등록번호</td>
+            <td>
+                <input type="text" name="id1" maxlength="6"> -
+                <input type="text" name="id2" maxlength="7">
+            </td>
+        </tr>
+        <tr>
+            <td>가을여행지</td>
+            <td>
+                <select name="trip"  >
+                    <option value="t1">에버랜드</option>
+                    <option value="t2">북한산</option>
+                    <option value="t3">낙산사</option>
+                    <option value="t4">청평사</option>
+                    <option value="t5">대포항</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>관심분야</td>
+            <td>
+                <select name="point" size="2" >
+                    <optgroup label="a">
+                        <option value="p1">영화</option>
+                        <option value="p2">음악</option>
+                    </optgroup>
+                    <optgroup label="b">
+                        <option value="p3">프로그래밍</option>
+                        <option value="p4">철학</option>
+                        <option value="p5">서핑</option>
+                    </optgroup>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" >
+                <input type="submit" value="등록하기">&nbsp;&nbsp;
+                <input type="reset" value="새로작성">&nbsp;&nbsp;
+                <input type="button" value="누르세요">&nbsp;&nbsp;
+                <input type="image" src="image\5.jpg" width="200">
+            </td>
+        </tr>
+    </form>
+</table>
+<hr/>
+<form name="form2" action="1019.html">
+    <fieldset>
+        <legend>개인정보</legend><!--legend : 그룹의 이름지정-->
+        이름 : <input type="text" name="name"><br/>
+        전화번호 : <input type="text" name="tel"><br/>
+        주소 : <input type="text" name="addr"><br/>
+    </fieldset>
+    <br/>
+    <fieldset>
+        <legend>신체정보</legend>
+        키 : <input type="text" name="height"><br/>
+        몸무게 : <input type="text" name="weight"><br/>
+        시력좌 : <input type="text" name="left"><br/>
+        시력우 : <input type="text" name="right"><br/>
+    </fieldset>
+    <input type="submit" value="등록">
+    <input type="reset" value="취소">
+
+
+</form>
+
+
+
+
+
+
+
+
+</body>
+</html>
