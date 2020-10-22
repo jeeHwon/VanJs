@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .one{
+            width:300px;
+            height:150px;
+            background:aqua;
+            margin:50px;
+            border:3px solid black;
+            padding:20px;
+            }
+        .two{
+            width:200px;
+            height:100px;
+            background:orange;
+            border:5px solid black;
+            padding:20px;
+            margin:30px; /*공통영역이 겹치는 경우 큰 여백따라*/
+            box-sizing:border-box; /*패딩과 보더값을 포함하여 너비와 높이 적용*/
+            }
+        .first{width:200px;height:100px;background:pink;}
+        a{width:200px;height:100px;background:gray;}
+        /*인라인 요소는 너비와 높이가 적용안됨, 오로지 블록요소만*/
+        img{width:200px;height:300px;}
+        /*이미지 태그는 인라인 요소이지만 너비와 높이가 적용*/
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="one">첫번째 박스</div>
+    <div class="two">두번째 박스</div>
+    <span class="first">span태그1</span>
+    <span class="second">span태그2</span>
+    <a href="#">이미지태그</a>
+    <img src="image/5.jpg" >
+    <!--div는 블록이라 한줄 다먹는데 나머지는 딱 고만큼만-->
+</div>
+
+
+
+</body>
+</html>
