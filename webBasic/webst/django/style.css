@@ -1,40 +1,148 @@
-html {font-size:10px;}
-* {box-sizing:border-box;}
+html {font-size:10px;
+    }
+* {box-sizing:border-box;
+font-family:roboto;
+margin:0;}
 body{font-size:1.5rem}
-a{text-decoration:none;}
 
-.header {background:AliceBlue}
-.container{max-width:1000px;
-    background:pink;
+a{text-decoration:none;}
+.mailing a:link{text-decoration:none; color:#20aa76;}
+.mailing a:hover{text-decoration:none; color:#25C488;}
+
+.header {background:#0b4b33;
+margin:0;
+height:80px;}
+
+.container, .container-float {max-width:1440px;
     margin:0 auto;
     position:relative;
-    height:50px;
-    padding:15px 0;
+    height:100px;
+    padding:30px 0;
 }
+
 .logo{position:absolute;
-    top:0;
+    top:20px;
     left:10px;
     margin:0;
     padding:0 0 0 20px;
+    color:white;
 }
+
 .nav {text-align:right;}
 ul{list-style:none}
 .list-item{display:inline;}
-header a{color:white;padding:5px;font-size:1rem;}
+header a{
+    color:white;
+    padding:5px;
+    font-size:1.2rem;
+    font-weight:bold;}
 header a:hover{color:MediumAquaMarine}
 
+/*hero 영역*/
+.hero {
+    text-align:center;
+    padding:50px 0 30px 0;
+    height:400px;
+    border-bottom:1px solid #e6f0ec;}
+.hero1{
+    font-size:3rem;
+    width:700px;
+    margin:30px auto;
+    font-weight:300;
+}
+.hero2{
+    display:block;
+    width:350px;
+    background:#44b88b;
+    margin:30px auto; /*가운데 정렬*/
+    padding:20px; /*버튼처럼 보이게*/
+    border-radius:7px; /*코너처리(반지름길이)*/
+    color:white;
+    font-size:2rem;
+    font-weight:600;
+}
+.hero2:hover{
+    background:#51BE95;
+    }
 
 
-
-
-.main {background:Aquamarine}
-.hero {background:Brown}
 .main-content {
-    background:CadetBlue;
     float:left;
-    width:70%;}
+    width:70%;
+    padding:10px;
+    line-height:3rem;
+}
+
+.main-title {
+    color:#21aa77;
+    font-size:3rem;
+    color:#0d3838;
+}
+.main-desc {
+    font-family:"Palatino", "Palatino Linotype";
+    padding:20px 0;
+}
+.icon-post{
+    color:#0d3838;
+}
+.mailing{
+    float:left;
+    width:50%;
+}
+.mailing-title{
+    color:black;
+}
+
+
+/*버튼의 위치기준*/
+.frm1{
+    position:relative; /*버튼의 위치기준*/
+    margin:10px 0 30px 0;
+}
+.btn1 {
+    position:absolute;
+    top:5px;
+    right:15px;
+    border:0;
+    background:transparent;
+    cursor:pointer;
+}
+input{
+    width:95%;
+    height:30px;
+    padding:5 50px 5px 5px;
+    border: 1px solid #e6f0ec;
+}
+.mailing-layout::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.main-end {clear:both;}
+
+
+
 .side-content {
-    background:RebeccaPurple;
+    background:#f8f8f8;
     float:left;
-    width:30%;}
-.footer {background:BurlyWood}
+    width:30%;
+}
+.container-float::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+
+.footer {
+    background:BurlyWood;
+    clear:both;
+     /*main-content와 side-cotent의 플로트 영역으로부터 독립적으로 나타냄*/
+    }
+.foot1{
+    background:#44b88b;
+    height:100px;
+}
+.foot2{
+    background:#0b4b33;
+    height:100px;
+}
