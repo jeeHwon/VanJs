@@ -1,15 +1,127 @@
-html{font-size: 10px;}
+html{font-size: 12px;}
 *{
     box-sizing: border-box;
-    font-family:'Roboto', sans-serif;
+    font-family:roboto;
     margin: 0;
 }
 body{
     font-size:1.5rem;
+
 }
-a{
-    text-decoration:none;
+a{text-decoration:none;}
+
+.header {background:#2F2F2F;
+    margin:0;
+    height:100px;}
+
+
+.container, .container-float {
+    max-width:1440px;
+    margin:0 auto;
+    position:relative;
+    height:100px;
+    padding:10px 0;
 }
-a:link{text-decoration:none; color:black;}
-a:visited{text-decoration:none; color:black;}
-a:hover{text-decoration:none; color:black;}
+    
+.logo {
+    position:absolute;
+    top:30px;
+    left:10px;
+    margin:0;
+    padding:0 0 0 20px;
+    color:white;
+}
+.nav {
+    text-align:right;
+    margin-top: 50px;
+    padding-right: 30px;
+}
+
+ul{list-style:none}
+
+.nav-item{
+    display:inline;
+}
+
+header a{
+    color:white;
+    padding:5px;
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+header a:hover{color:MediumAquaMarine}
+
+/*halo 영역*/
+.halo {
+    text-align:center;
+    padding:50px 0 30px 0;
+    height:400px;
+    border-bottom:1px solid #e6f0ec;
+}
+.halo1{
+    font-size:3rem;
+    width:700px;
+    margin:30px auto;
+    font-weight:300;
+}
+
+.halo2{
+    display:block;
+    width:400px;
+    background:#FF6660;
+    margin:30px auto; /*가운데 정렬*/
+    padding:20px; /*버튼처럼 보이게*/
+    border-radius:7px; /*코너처리(반지름길이)*/
+    color:white;
+    font-size:2rem;
+    font-weight:600;
+}
+.halo2:hover{
+    background:#ff847f;
+}
+
+/*main 영역*/
+.main-content {
+    float:left;
+    width:70%;
+    padding:10px;
+    line-height:3rem;
+    border: solid 1px black;
+}
+
+.main-title {
+    color:#21aa77;
+    font-size:3rem;
+    color:#0d3838;
+}
+.main-desc {
+    font-family:"Palatino", "Palatino Linotype";
+    padding:20px 0;
+}
+.icon_space{
+    padding: 5px;
+    text-align: center;
+}
+.icon{
+    width:90px;
+    height: 90px;
+}
+.studying{
+    float:left;
+    width:50%;
+}
+.studying-title{
+    color:black;
+}
+
+.side-content {
+    border: solid 1px blue;
+    float:left;
+    width:30%;
+}
+.container-float::after{
+    content:'';
+    display:block;
+    clear:both;
+}
