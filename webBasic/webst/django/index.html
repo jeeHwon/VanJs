@@ -1,97 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
 </head>
-
 <body>
-    <header class="header">
+<header class="header">
+    <div class="container">
+        <h1 class="logo">django</h1>
+        <nav class="nav">
+            <ul class="list">
+                <li class="list-item">
+                    <a href="#">OVERVIEW</a>
+                </li>
+                <li class="list-item">
+                    <a href="#">DOWNLOAD</a>
+                </li>
+                <li class="list-item">
+                    <a href="#">DOCUMENTATION</a>
+                </li>
+                <li class="list-item">
+                    <a href="#">NEWS</a>
+                </li>
+                <li class="list-item">
+                    <a href="#">COMMUNITY</a>
+                </li>
+                <li class="list-item">
+                    <a href="#">CODE</a>
+                </li>
+                <li class="list-item">
+                    <a href="#">ISSUES</a>
+                </li>
+                <li class="list-item">
+                    <a href="#">ABOUT</a>
+                </li>
+                <li class="list-item">
+                    <a href="#">♥ DONATE</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="main">
+    <div class="hero">
         <div class="container">
-            <h1 class="logo">django</h1>
-            <nav class="nav">
-                <ul class="list">
-                    <li class="list-item">
-                        <a href="#">OVERVIEW</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">DOWNLOAD</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">DOCUMENTATION</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">NEWS</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">COMMUNITY</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">CODE</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">ISSUES</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">ABOUT</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">♥ DONATE</a>
-                    </li>
-                </ul>
-            </nav>
+            <p class="hero1">Django makes it easier to build better Web<br>
+                apps more quickly and with less code.</p>
+            <p><a href="#" class="hero2 main-hero2">Get started with Django</a></p>
         </div>
-    </header>
-
-    <main class="main">
-        <div class="hero">
-            <div class="container">
-                <p class="hero1">Django makes it easier to build better Web<br>
-                    apps more quickly and with less code.</p>
-                <p><a href="#" class="hero2">Get started with Django</a></p>
-            </div>
-        </div>
-        <div class="container-float">
-            <div class="main-content">
-                <h2 class="main-title">Stay in the loop</h2>
-                <p class="main-desc">Subscribe to one of our mailing lists to stay up to date with everything in the
-                    Django community<br></p>
-                <div class="mailing-layout">
-                    <div class="mailing">
-                        <h3 class="mailing-title"><a href="#">Using django</a></h3>
-                        <p class="mailing-desc">Get help with Django and follow announcements</p>
-                        <form action="#" class="frm1">
-                            <input type="email" name="email1" id="email1" placeholder="Enter email">
-                            <button type="submit" value="전송" class="btn1">submit</button>
-                        </form>
-                    </div>
-                    <div class="mailing">
-                        <h3 class="mailing-title"><a href="#">Contributing to Django</a></h3>
-                        <p class="mailing-desc">Contribute to the development of Django itself.</p>
-                        <form action="#" class="frm1">
-                            <input type="email" name="email2" id="email2" placeholder="Enter email">
-                            <button type="submit" value="전송" class="btn1">submit</button>
-                        </form>
-                    </div>
+    </div>
+    <div class="container-float">
+        <div class="main-content">
+            <h2 class="main-title">Stay in the loop</h2>
+            <p class="main-desc">Subscribe to one of our mailing lists to stay up to date with everything in the
+                Django community<br></p>
+            <div class="mailing-layout">
+                <div class="mailing">
+                    <h3 class="mailing-title"><a href="#">Using django</a></h3>
+                    <p class="mailing-desc">Get help with Django and follow announcements</p>
+                    <form action="#" class="frm1">
+                        <input type="email" name="email1" id="email1" placeholder="Enter email">
+                        <button type="submit" value="전송" class="btn1">submit</button>
+                    </form>
                 </div>
-                <p class="main-end">We have a few other specialized lists (mentorship, i18n, ...). You can find more
-                    information about them in our mailing list documentation.</p>
-
+                <div class="mailing">
+                    <h3 class="mailing-title"><a href="#">Contributing to Django</a></h3>
+                    <p class="mailing-desc">Contribute to the development of Django itself.</p>
+                    <form action="#" class="frm1">
+                        <input type="email" name="email2" id="email2" placeholder="Enter email">
+                        <button type="submit" value="전송" class="btn1" >submit</button>
+                    </form>
+                </div>
             </div>
-            <div class="side-content">사이드</div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="foot1">
+            <p class="main-end">We have a few other specialized lists (mentorship, i18n, ...). You can find more information about them in our mailing list documentation.</p>
 
         </div>
-        <div class="foot2">
+        <div class="side-content">
+            <div class="container-side-cta">
+                <a href="#" class="hero2 side-hero2">Download latest release: 3.1.2</a>
+                <a href="#" class="more">Django documentation</a>
+            </div>
+            <div class="infos lastest-news">
+                <h2 class="infos-title">Support Django!</h2>
+                <article class="news-article">
+                    <div class="support">
+                        <span class="heart1"><img src="heart.svg" alt="heart" width="60px"></span>
+                        <span class="heart2 news-title"><a href="#" class="heart-desc">iStrategyLabs donated to the
+                            Django Software Foundation to support Django development. Donate today!</a><br></span>
+                    </div>
+                </article>
+                <a href="#" class="more">MORE NEWS</a>
+            </div>
+
+            <div class="infos lastest-news">
+                <h2 class="infos-title">Latest news</h2>
+                <article class="news-article">
+                    <h3 class="news-title"><a href="#">Django Technical Board Election Results 2020</a></h3><br>
+                    <p class="news-desc">Django Technical Board Election Results for the inaugural 2020 election.</p><br>
+                    <p class="news-meta"><span>Posted by <b>Frank Wiles</b> on 10월 1, 2020</span></p><br>
+                </article>
+                <a href="#" class="more">MORE NEWS</a>
+            </div>
+
+
 
         </div>
-    </footer>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="foot1">
+        <span class="ft1">
+            <ul class="ft1list">
+                <li><b>Learn more</b></li><br>
+                <li>About Django</li>
+                <li>Getting Started with Django</li>
+                <li>Team Organization</li>
+                <li>Django Software Foundation</li>
+                <li>Code of Conduct</li>
+                <li>Diversity Statement</li>
+            </ul>
+        </span>
+        <span class="ft2">
+            <ul class="ft1list">
+                <li><b>Get Involved</b></li><br>
+                <li>Join a Group</li>
+                <li>Contribute to Django</li>
+                <li>Submit a Bug</li>
+                <li>Report a Security Issue</li>
+            </ul>
+        </span>
+        <span class="ft3">
+            <ul class="ft1list">
+                <li><b>Follow Us</b></li><br>
+                <li>GitHub</li>
+                <li>Twitter</li>
+                <li>News RSS</li>
+                <li>Django Users Mailing List</li>
+            </ul>
+        </span>
+        <span class="ft4">
+            <ul class="ft1list">
+                <li><b>Support Us</b></li><br>
+                <li>Sponsor Django</li>
+                <li>Official merchandise store</li>
+                <li>Amazon Smile</li>
+                <li>Benevity Workplace Giving Program</li>
+            </ul>
+        </span>
+    </div>
+    <div class="foot2">
+        <div class="ft2-container">
+            <span class="ft2-1">django</span>
+            <span class="ft2-2">Hosting by<br><i><b>rackspace</b></i></span>
+            <span class="ft2-3">Design by<br>threespot. <small>&</small><br>andrevv</span>
+        </div>
+    </div>
+</footer>
 </body>
-
 </html>

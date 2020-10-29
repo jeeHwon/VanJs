@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="test1.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="title">개인회원 상세정보 입력</h1>
+    <div class="detail">
+        <ul>
+            <li>이름을 포함해 반드시 실명 데이터를 사용해야 합니다</li>
+            <li>회원가입 시 허위로 정보를 기재하거나 타인의 정보를 도용하여 가입한 아이디는 벅적인 보호를 받으실 수 없으며 서비스 이용에 제한을 받게 됩니다</li>
+            <li>한번 부여된 <span>ID는 변경할 수 없으니</span> 신중하게 기입해 주시기 바랍니다.</li>
+            <li>전자신문인터넷은 회원님의 개인정보를 신중하게 보호하려 노력하고 있으며 회원님의 동의 없이는 기재하신 회원 정보가 누출되지 않습니다.</li>
+        </ul>
+    </div>
+    <div class="form">
+        <form name="insertform" id="insertform" method="post" action="js1.html">
+            <table>
+                <tr>
+                    <th width="20%">아이디</th>
+                    <td><input type="text" name="userid" id="userid" placeholder="알파벳,숫자,특수문자"></td>
+                </tr>
+                <tr>
+                    <th>이름</th>
+                    <td>홍길동 <input type="hidden" name="name" id="name" value="3333"> </td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td><input type="password" name="pw" id="pw"> </td>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인</th>
+                    <td><input type="password" name="pw" id="pw2"> </td>
+                </tr>
+                <tr>
+                    <th>생년월일</th>
+                    <td>
+                        <input type="text" name="year" id="year">년
+                        <input type="text" name="month" id="month">월
+                        <input type="number" name="day" id="day" min="1" max="31">일<br>
+                        <input type="radio" name="sel1" value="1" checked>양력
+                        <input type="radio" name="sel1" value="2">음력
+
+                    </td>
+                </tr>
+                <tr>
+                    <th>직종분류</th>
+                    <td>
+                        <select name="job">
+                            <option value="0">--선택하세요--</option>
+                            <option value="1">IT분야</option>
+                            <option value="2">농업분야</option>
+                            <option value="3">상업분야</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="가입하기"></td>
+                </tr>
+
+
+            </table>
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>

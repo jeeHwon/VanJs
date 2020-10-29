@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>제어문</title>
+</head>
+
+<body>
+<pre>
+    if (조건) {실행내용}
+</pre>
+<script>
+    /*
+    score = prompt('점수를 입력하시오'); // string(자동형변환)
+    //score = Number(prompt('점수를 입력하시오'));
+    //score = parseInt(prompt('점수를 입력하시오'));
+    //score = parseFloat(prompt('점수를 입력하시오'));
+    //document.write(typeof score,score)
+    if (score>=90 && score<=100) {
+        document.write('A grade');
+        //document.write(score+score); 이떈 문자열?
+        //document.write(score>99); 이떈 숫자?
+    } else if(score>=80 && score <90) {
+        document.write('B grade');
+    } else if(score>100 || score <0) {
+        document.write('잘못된 점수값 입력');
+    } else {
+        document.write('C grade');
+    }
+
+    score = Number(prompt('점수를 입력하세요'));
+    result = typeof score;
+    document.write('typeof score='+result+'<br>');
+    document.write('score='+score+'<br>');
+    if (isNaN(score)) { //Not a Number
+        document.write('잘못된 입력'); //타입은 넘버라도 상관없음? 응 타입은 넘번데 스트링을 강제형변환해서 NaN이니까 isNaN은 true뜨지
+    } else {
+        if (score>=90 && score<=100) {
+            document.write('A grade');
+        } else if(score>=80 && score <90) {
+            document.write('B grade');
+        } else if(score>100 || score <0) {
+            document.write('잘못된 점수값 입력');
+        } else {
+            document.write('C grade');
+        }
+    }
+    */
+    result = confirm('파일을 업로드 하시겠습니까?')
+    if (result)
+        document.write('업로드 완료');
+    else
+        document.write('다시 등록');
+
+</script>
+</body>
+</html>

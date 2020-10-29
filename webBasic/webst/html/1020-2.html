@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 양식 copy</title>
+</head>
+<body>
+<table width="800" border="1" >
+    <form neme="signin" action="">
+        <tr>
+            <td colspan="2">&nbsp;&nbsp;기본정보입력</td>
+        </tr>
+        <tr>
+            <td width="20%">&nbsp;&nbsp;가입인증</td>
+            <td>
+                <input type="radio" name="cert" value="1" checked>휴대폰 인증&nbsp;&nbsp;
+                <input type="radio" name="cert" value="2">이메일 인증
+                <fieldset size="100" bgcolor="gray">
+                    <table>
+                        <tr>
+                            <td>휴대폰 입력</td>
+                            <td>
+                                <select name="tel" >
+                                    <option value="t1">010</option>
+                                    <option value="t2">011</option>
+                                    <option value="t3">016</option>
+                                    <option value="t4">017</option>
+                                    <option value="t5">018</option>
+                                    <option value="t6">019</option>
+                                </select>
+                                -
+                                <input type="text" name="tel_mid" size="10" maxlength="4">
+                                -
+                                <input type="text" name="tel_last" size="10" maxlength="4">
+                                <input type="button" name="callcert" value="인증번호받기" >
+                            </td>
+                        </tr>
+                        <br>
+                        <tr>
+                            <td>인증번호입력</td>
+                            <td>
+                                <input type="text" name="certnum" size="38" maxlength="6">
+                                <input type="button" name="certok" value="확인" >
+                            </td>
+                        </tr>
+                        <br>
+                        <tr>
+                            <td colspan="2">
+                                <font size="2">
+                                    <font color="red">가입인증 방법하나를 선택하여 인증을 받으시기 바랍니다.</font><br>
+                                    휴대폰으로 발송된 인증번호를 입력한 후 확인을 누르면 인증이 완료됩니다.<br>
+                                    인증절차에 궁금증이 있으시면 02-784-2329로 연락주세요(평일 오전 9시~오후 6시)
+                                </font>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td height="35">&nbsp;&nbsp;아이디</td>
+            <td><input type="text" name="userid" maxlength="10" id="userid"></td>
+        </tr>
+        <tr>
+            <td height="35">&nbsp;&nbsp;비밀번호</td>
+            <td><input type="password" name="pw" id="pw1"></td>
+        </tr>
+        <tr>
+            <td height="35">&nbsp;&nbsp;비밀번호 확인</td>
+            <td><input type="password" name="pw" id="pw1"></td>
+        </tr>
+        <tr>
+            <td height="35">&nbsp;&nbsp;닉네임</td>
+            <td><input type="text" name="usernn" maxlength="10" id="usernn"></td>
+        </tr>
+        <tr>
+            <td height="70">&nbsp;&nbsp;이메일</td>
+            <td>
+                <input type="text" name="emailid" maxlength="10" id="emailid">
+                @
+                <input type="text" name="emailadr" maxlength="10" id="emailadr">
+                <select name="domain"  >
+                    <option value="d1">직접입력</option>
+                    <option value="d2">naver.com</option>
+                    <option value="d3">hanmail.net</option>
+                    <option value="d4">nate.com</option>
+                    <option value="d5">paran.com</option>
+                    <option value="d6">korea.com</option>
+                </select>
+                <input type="checkbox" name="emailok" value="e" checked><font size="2">이메일 수신동의<br>
+                * 이메일은 아이디, 비밀번호 분실 시 본인 확인용으로 사용함으로 정확한 정보를 입력하세요<br>
+                <font color="red">* 이메일 주소를 반드시 기억하여 주시기 바랍니다</font></font>
+            </td>
+        </tr>
+        <tr>
+            <td height="35" colspan="2">
+                <center>
+                    <input type="submit" value="가입완료">&nbsp;&nbsp;
+                    <input type="reset" value="취소">
+                </center>
+            </td>
+        </tr>
+
+
+
+
+
+
+    </form>
+
+</table>
+
+
+</body>
+</html>

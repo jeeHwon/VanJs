@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function f1(){
+            name = prompt("이름은 ");
+            alert(name+"쿤 안녕");
+        }
+    </script>
+</head>
+<body>
+<pre>
+    결과값 출력을 위한 콘솔 : console.log('출력내용'');
+    웹페이지 출력 : document.write('출력내용');
+</pre>
+<!--
+<script>
+    alert('one');
+    alert('two');
+    console.log('첫번째');
+    console.log('두번째');
+</script>
+-->
+<form action="">
+    <input type="button" value="누르세요" onclick="f1()">
+</form>
+<script>
+    document.write('빨강');
+    document.write('파랑'); //document.write는 줄이 바뀌지 않는다
+    document.write('<hr>');
+    document.write('노랑<br>');
+    document.write('초록');
+</script>
+
+
+</body>
+</html>

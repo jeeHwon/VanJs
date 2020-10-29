@@ -1,12 +1,13 @@
 html {font-size:10px;
     }
 * {box-sizing:border-box;
-font-family:roboto;
+font-family: 'Roboto', sans-serif;
 margin:0;}
 body{font-size:1.5rem}
 
 a{text-decoration:none;}
 .mailing a:link{text-decoration:none; color:#20aa76;}
+.mailing a:visited{text-decoration:none; color:#20aa76;}
 .mailing a:hover{text-decoration:none; color:#25C488;}
 
 .header {background:#0b4b33;
@@ -50,9 +51,24 @@ header a:hover{color:MediumAquaMarine}
     margin:30px auto;
     font-weight:300;
 }
+/*
 .hero2{
     display:block;
     width:350px;
+    background:#44b88b;
+    margin:30px auto; 가운데 정렬
+    padding:20px; 버튼처럼 보이게
+    border-radius:7px; 코너처리(반지름길이)
+
+    color:white;
+    font-size:2rem;
+    font-weight:600;
+}
+*/
+
+/*<a href="#" class="hero2 main-hero2">Get started with Django</a>*/
+.hero2{ /*hero2 공통적인 특징만 넣고 메인, 사이드에서 다르게 크기 설정가능*/
+    display:block;
     background:#44b88b;
     margin:30px auto; /*가운데 정렬*/
     padding:20px; /*버튼처럼 보이게*/
@@ -61,6 +77,11 @@ header a:hover{color:MediumAquaMarine}
     font-size:2rem;
     font-weight:600;
 }
+.main-hero2{
+      width:350px;
+
+}
+
 .hero2:hover{
     background:#51BE95;
     }
@@ -74,7 +95,7 @@ header a:hover{color:MediumAquaMarine}
 }
 
 .main-title {
-    color:#21aa77;
+
     font-size:3rem;
     color:#0d3838;
 }
@@ -92,6 +113,12 @@ header a:hover{color:MediumAquaMarine}
 .mailing-title{
     color:black;
 }
+.mailing-desc{
+    color:#0d3838;
+}
+.main-end{
+    color:#0d3838;
+}
 
 
 /*버튼의 위치기준*/
@@ -102,13 +129,14 @@ header a:hover{color:MediumAquaMarine}
 .btn1 {
     position:absolute;
     top:5px;
-    right:15px;
+    right:30px;
     border:0;
     background:transparent;
     cursor:pointer;
 }
 input{
-    width:95%;
+    width:90%;
+
     height:30px;
     padding:5 50px 5px 5px;
     border: 1px solid #e6f0ec;
@@ -132,6 +160,102 @@ input{
     display:block;
     clear:both;
 }
+.container-side-cta{
+    text-align:center;
+    margin:20px auto;
+
+}
+
+.more{
+    display:block;
+    font-color:#f8f8f8;
+    font-size:1.5rem;
+    font-weight:600;
+    padding:0 0 0 20px;
+}
+.more:link{text-decoration:none; color:#20aa76;}
+.more:visited{text-decoration:none; color:#20aa76;}
+.more:hover{text-decoration:none; color:#25C488;}
+.more::after{
+    content:' >';
+}
+
+.side-hero2{
+    width:400px;
+    font-size:1.5rem;
+}
+.infos-title{
+    font-weight:300;
+    padding:10px 0 20px 20px;
+    border-bottom:1px solid #e6f0ec;
+    color:#0d3838;
+}
+.news-title{
+    font-color:#f8f8f8;
+    padding:30px auto;
+    font-weight:400;
+}
+
+.news-title a:link{text-decoration:none; color:#20aa76;}
+.news-title a:visited{text-decoration:none; color:#20aa76;}
+.news-title a:hover{text-decoration:none; color:#25C488;}
+
+.news-article{
+    padding:20px 0 10px 20px;
+
+}
+/*
+max-width:1440px;
+    margin:0 auto;
+    position:relative;
+    height:100px;
+    padding:30px 0;
+}*/
+.support{
+
+    position:relative;
+}
+.heart1{
+    float:left;
+    width:30%;
+    height:100px;
+    text-align: center;
+}
+.heart2{
+    position:relative;
+    float:left;
+    width:70%;
+}
+.heart-desc{
+    position:absolute;
+    font-size:1.3rem;
+    left:10px;
+}
+.support::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+
+
+
+.news-desc{
+    font-size:1.5rem;
+    font-weight:350;
+}
+.news-meta{
+    color:#869b9d;
+    font-weight:350;
+}
+.infos .more{
+    font-size:1.2rem;
+    padding: 0 0 30px 20px;
+}
+
+
+
+
+
 
 .footer {
     background:BurlyWood;
@@ -139,10 +263,69 @@ input{
      /*main-content와 side-cotent의 플로트 영역으로부터 독립적으로 나타냄*/
     }
 .foot1{
+    position:relative;
     background:#44b88b;
-    height:100px;
+    height:350px;
+    color:white;
+    font-weight:300;
+    line-height:200%;
+    padding:30px 0 0 0;
+
 }
+.ft1list{
+    padding:20px auto;
+}
+.ft1{
+
+    float:left;
+    width:25%;
+}
+.ft2{
+
+    float:left;
+    width:25%;
+}
+.ft3{
+
+    float:left;
+    width:25%;
+}
+.ft4{
+
+    float:left;
+    width:25%;
+}
+
+
+
+
 .foot2{
+    padding:20px 0;
     background:#0b4b33;
     height:100px;
+}
+.ft2-container{
+    padding:0 30px;
+    position:relative;
+    heigth:300px;
+}
+.ft2-1{
+    color:white;
+    font-size:3rem;
+    float:left;
+    width:33%;
+
+}
+.ft2-2{
+    float:left;
+    width:33%;
+    color:#689683;
+    font-weight:300;
+
+}
+.ft2-3{
+    float:left;
+    width:33%;
+    color:#689683;
+    font-weight:300;
 }

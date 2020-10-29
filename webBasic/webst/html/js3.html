@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>대화상자와 변수</title>
+</head>
+<body>
+<pre>
+    alert(메시지)
+    prompt(메시지, 기본값) 입력값 전달
+    confirm(메시지) 확인, 취소 선택 -> 선택따라 true or false 반환
+    ---------------------------
+    변수명:영문, 숫자,_,$ 사용가능 (
+        but 첫글자는 숫자x, 대소문자 구분o, 예약어 사용x)
+    var 변수;
+    var 변수1, 변수2, 변수3;
+    var a,b = 1, c;
+    ----------------------------
+    Number (정수,실수)
+    String (문자열)
+    Boolean (true, false)
+    Object (객체 저장)
+    null : 값 없음
+    undefined : 정의되지 않음
+    동적타입 : 실행중 데이터타입이 자유롭게 변경
+
+
+</pre>
+<script>
+    //kor = 91
+    kor = prompt('국어점수는=', 0);
+    alert("국어점수는 "+kor+ "입니다");
+    result = confirm("점수는 바꾸지 못합니다. \n계속하시겠습니까?");
+    //console.log(result);
+    if (result) {
+        document.write("입력이 저장되었습니다.");
+    } else {
+        document.write("입력이 취소되었습니다.");
+    }
+
+    document.write("줄이 너무 길어서 한줄에 표현하기 어려울 떄는 \
+    를 행 끝에 붙이고 다음줄로 내려 쓰세요");
+    document.write('<hr>');
+    a = 502;
+    document.write("a="+a+"<br>");
+    a = "개발자";
+    document.write("a="+a+"<br>");
+    a = true;
+    document.write("a="+a+"<br>");
+    var b;
+    document.write("b="+b+"<br>");
+    document.write("-------------------<br>");
+    /*
+    a1=100+30;
+    a2=100-30;
+    a3=100*30;
+    a4=100/30;
+    a5=100%30;
+    console.log(a1);
+    console.log(a2);
+    console.log(a3);
+    console.log(a4);
+    console.log(a5);
+    */
+
+    //단항연산
+    var a = 100;
+    a += 5 ;
+    console.log(a);
+    a -= 5 ;
+    console.log(a);
+    a *= 5 ;
+    console.log(a);
+    a /= 5 ;
+    console.log(a);
+    a %= 5 ;
+    console.log(a);
+
+    //증감연산자
+    a = 100, x = 1;
+    y = a + x++;
+    console.log('a='+a);
+    console.log('x='+x);
+    console.log('y='+y);
+    a = 100, x = 1;
+    y = a + ++x;
+    console.log('a='+a);
+    console.log('x='+x);
+    console.log('y='+y);
+
+
+
+
+</script>
+
+</body>
+</html>

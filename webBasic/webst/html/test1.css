@@ -1,0 +1,53 @@
+html{
+    font-size:10px;
+}
+body{
+    font-size:1.5rem;;
+}
+*{
+    margin:0;
+    line-height:200%;
+}
+
+.container{
+    mix-width:1400px;
+    margin:0 auto;
+
+}
+
+li span {
+    color:red;
+    font-weight:bold;
+}
+form{
+    font-size:1.5rem;
+}
+table{
+
+    width:90%;
+}
+
+th{
+    background:gray;
+    border-bottom:1px solid gray;
+}
+
+input['text'],input['password'],input['number']{
+    width:90%;
+    height:50px;
+    margin:10px 20px;
+}
+input.one
+
+
+
+
+
+
+
+
+
+
+
+
+
