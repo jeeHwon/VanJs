@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+</head>
+<body>
+<table width="800" border="1" >
+    <form name="signin" action="">
+        <tr>
+            <td colspan="2" align="center">회원가입</td>
+        </tr>
+        <tr>
+            <td width="20%">사용자ID</td>
+            <td>
+                <input type="text" name="userid" maxlength="10" id="userid">
+                <input type="button" value="중복확인">
+            </td>
+        </tr>
+
+        <tr>
+            <td height="35">비밀번호</td>
+            <td><input type="password" name="pw" id="pw1"></td>
+        </tr>
+        <tr>
+            <td height="35">비밀번호 확인</td>
+            <td><input type="password" name="pw" id="pw2"></td>
+        </tr>
+        <tr>
+            <td height="35">사용자이름</td>
+            <td><input type="text" name="username" id="username"></td>
+        </tr>
+        <tr>
+            <td>주민등록번호</td>
+            <td>
+                <input type="text" name="id1" maxlength="6"> -
+                <input type="text" name="id2" maxlength="7">
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input type="text" name="emailid" maxlength="10" id="emailid">@
+                <input type="text" name="emailadr" maxlength="10" id="emailadr">
+                <select name="domain"  >
+                    <option value="d1">직접작성</option>
+                    <option value="d2">네이버</option>
+                    <option value="d3">다음</option>
+                    <option value="d4">구글</option>
+                    <option value="d5">네이트</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>취미</td>
+            <td>
+                <input type="checkbox" name="hobby" value="m">등산
+                <input type="checkbox" name="hobby" value="f">낚시
+                <input type="checkbox" name="hobby" value="t">여행
+                <input type="checkbox" name="hobby" value="b">독서
+                <input type="checkbox" name="hobby" value="e">기타
+            </td>
+        </tr>
+        <tr>
+            <td height="35">주소</td>
+            <td><input type="text" name="address" id="address"></td>
+        </tr>
+        <tr>
+
+        <tr>
+            <td>직업</td>
+            <td>
+                <select name="food">
+                    <option value="ff">직접입력</option>
+                    <option value="f1">학생</option>
+                    <option value="f2">회사원</option>
+                    <option value="f3">공무원</option>
+                    <option value="f4">자영업</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>자기소개</td>
+            <td>
+                <textarea name="info" cols="50" rows="5">간략히 작성하세요</textarea>
+            </td>
+        </tr>
+        <td height="35" colspan="2">
+            <center>
+                <input type="submit" value="회원가입">&nbsp;&nbsp;
+                <input type="reset" value="다시입력">
+            </center>
+        </td>
+        </tr>
+
+
+
+
+
+
+    </form>
+
+</table>
+
+
+</body>
+</html>
