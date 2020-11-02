@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var global = 'global'
+        function f1(){
+            var local = 'local'
+            document.write('함수안 local : '+local+'<br>')
+            document.write('함수밖 global : '+global+'<br>')
+        }
+        f1();
+
+        score1 = 1000;
+        function f2(){
+            var score1 = 100;
+            score2 = 200;
+            //전역변수와 지역변수 이릅이 같을경우 지역변수 우선
+            document.write('score1='+score1+'<br>')
+            //전역변수에 꼭 접근하고 싶은 경우 this 사용 / this는 window 의미
+            document.write('score1='+this.score1+'<br>')
+        }
+        f2();
+
+    </script>
+</head>
+<body>
+<pre>
+    전역변수 : script 태그 안에 선언
+    지역변수 : 함수내부에 선언. 해당함수에서만 사용, 지역변수로 선언하려면 반드시 var 사용
+
+</pre>
+<script>
+    document.write('바디안에서 global : '+global+'<br>') //스크립트 나뉘어져있어도 참조가능
+    //document.write('score1='+score1) //score1은 지역변수로 사용
+    document.write('score2='+score2)
+</script>
+</body>
+</html>

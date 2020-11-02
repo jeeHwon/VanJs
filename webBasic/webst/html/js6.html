@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+    함수의 정의
+    function 함수명(매개변수){}
+
+    함수의 호출
+    함수명(매개변수);
+</pre>
+<script>
+    function f1(){
+        document.write('<h1>hi javaScript</h1>')
+    }
+    f1();
+    document.write('-------------------')
+
+    function f2(x,y){
+        z = x+y;
+        document.write('<h1>'+z+'</h1>')
+
+    }
+    f2(10);
+    document.write('-------------------')
+
+    function f3(x,y){
+        document.write('<h1>'+x+'</h1>')
+        document.write('<h1>'+y+'</h1>')
+        document.write('<h1>합은 '+(x+y)+'</h1>')
+    }
+    f3(1,2);
+    document.write('-------------------')
+
+    function f4(x,y){
+        document.write('<h1>'+x+'</h1>')
+        document.write('<h1>'+y+'</h1>')
+        if(x==undefined) x = 10 //디폴트값 적용
+        if(y==undefined) y = 20
+        document.write('<h1>'+x+'</h1>')
+        document.write('<h1>'+y+'</h1>')
+        document.write('<h1>합은 '+(x+y)+'</h1>')
+    }
+    f4();
+    document.write('-------------------')
+
+    function f5(x,y){
+        document.write('함수시작<br>')
+        var z=x+y;
+        if(z<10)
+            return;
+        return z;
+        document.write('함수끝<br>')
+    }
+    a = f5(1,2);
+    document.write(a+'<br>')
+    a = f5(1,20);
+    document.write(a+'<br>')
+    document.write('-------------------')
+
+    function hap(x,y){
+        return x+y
+    }
+    function print(x,y){
+        result = hap(x,y)   //함수간 호출
+        document.write('<h1>'+result+'</h1>');
+    }
+    print(100,1);
+
+
+
+</script>
+
+</body>
+</html>
