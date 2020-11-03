@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one{   
+            background:green;
+            color:red;
+        }
+    </style>
+    <script>
+        // css에는 중복아이디 인식, 자바스크립트는 먼저나오는 id값만 인식
+        function f1(){
+            document.getElementById("one").innerHTML="함수실행됨";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="one">자바스크립트 이벤트</h1>
+    <h1 id="one">와우</h1>
+    <a href="#" onclick="f1()">함수호출</a>
+</body>
+</html>

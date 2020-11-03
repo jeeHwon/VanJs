@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        height = 170
+        kor = 88
+        document.write(height+"이고 국어점수는 "+kor+"<br>")
+        document.write(typeof(height)+"<br>")
+        document.write(typeof(String(height))+"<br>")   //문자로변환
+
+        //eval(문자열) : 문자열을 수식으로 변경
+        a1 = 100+1
+        a2 = "100+1"
+        document.write(a1+"<br>")
+        document.write(a2+"<br>")
+        document.write(eval(a2)+"<br>")
+
+        //NaN = Not a number
+        //inNaN(value) : 숫자로 변경가능이면 false 숫자아님 true
+        a1 = "dooly"
+        a2 = "123456"
+        r1 = isNaN(a1)
+        r2 = isNaN(a2)
+        document.write(r1+"<br>")   //true : dolly는 숫자아님
+        document.write(r2+"<br>")   //false : 123456는 숫자로 변경가능
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

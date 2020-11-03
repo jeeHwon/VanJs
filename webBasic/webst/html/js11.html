@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function question(){
+            q = prompt("수식을 입력하세요")
+            a = eval(q)
+            document.getElementById("q").innerHTML=q+" = "+a
+        }
+    </script>
+</head>
+<body onload="question()">
+    <h1 id="q"></h1>
+    <input type="button" value="누르세요" onclick="question()"   >
+</body>
+</html>

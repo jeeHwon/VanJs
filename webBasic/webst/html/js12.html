@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(n){
+            msg = "f1()함수가 "+n+"번 실행되었습니다"  
+            //alert(msg)
+            document.getElementById("result").innerHTML=msg
+        }
+    </script>
+</head>
+<body onload="f1(5)">
+    <!-- 제어하려는 태그가 인식된 후에 자바스크립트 함수를 호출하는데
+    이부분을 해결한 이벤트가 onload() -->
+    <!-- <script>f1(5)</script> error h1 찾기 전이니까 없는걸로봐-->
+    <h1 id="result">onload 이벤트 테스트</h1>
+    
+    <script>f1(10)</script>
+</body>
+</html>
