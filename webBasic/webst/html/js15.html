@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+            alert("Hihi!")
+        }
+        a=f1
+        //a()
+        b = function(){
+            alert("reHi~")
+        }
+        //b()
+
+        //자바스크립트의 객체지향
+        //자바 : 객체설계도(클래스) 작성 -> 객체생성
+        //자바스트립트 : 객체생성 -> 객체에 변수나 함수 추가
+        people={}   //빈 객체생성
+        people.name="조성진"    //객체에 변수추가
+        people.addr="베를린"
+        people.eat=function(){  //객체에 함수추가
+            document.write("<h2>"+this.name+"은 와인을 마신다</h2>")
+        }
+        people.getInfo=function(){
+            return this.name+","+this.addr
+        }
+        //멤버변수 접근시
+        // document.write("<h2>"+people.name+"은 "+people.addr+"에 산다</h2>")
+        // people.eat()
+        // document.write(people.getInfo())
+
+        //자바스크립트의 내장객체 : Array, Math, String, Date, Document...
+        //String객체
+        // String s1 = new String("안녕하십니까"); //java
+        // String s1 = "안녕하십니까"; //java
+        // s1 = new String("안녕하십니까") //javaScript
+        // s1 = "안녕하십니까" //javaScript
+        s1 = "https://www.youtube.com/"
+        document.write("<h2>문자열의 길이 "+s1.length+"</h2>")
+        document.write("<h2>네번째 글자 "+s1.charAt(4)+"</h2>")
+        document.write("<h2>/의 처음위치 "+s1.indexOf('/')+"</h2>")
+        document.write("<h2>/의 마지막위치 "+s1.lastIndexOf('/')+"</h2>")
+
+        p1 = s1.indexOf('/')
+        document.write("<h2>/의 두번째위치 "+s1.indexOf('/',p1+1)+"</h2>")
+        document.write("<h2>@의 처음위치 "+s1.indexOf('@')+"</h2>")
+        document.write("<h2>문자열 자르기 "+s1.substring(12,19)+"</h2>")
+        document.write("<h2>문자열 자르기 "+s1.substring(19)+"</h2>")
+        document.write("<h2>대문자로 "+s1.toUpperCase()+"</h2>")
+        document.write("<h2>소문자로 "+s1.toLowerCase()+"</h2>")
+
+
+        url = "https://www.youtube.com/watch?v=Py-1GB05X2Y"
+        s1 = url.indexOf('://')
+        s2 = url.indexOf('/',s1+3)
+        document.write("<h2>도메인 "+url.substring(s1+3,s2)+"</h2>")
+        s3 = url.lastIndexOf('/')
+        s4 = url.indexOf('?')
+        document.write("<h2>파일명 "+url.substring(s3+1,s4)+"</h2>")
+
+        //Array : 배열, 0부터
+        a1 = new Array('둘리', '1억살', '쌍문동')
+        //a1 = ['둘리', '1억살', '쌍문동']
+        document.write("<h2>"+a1[0]+"</h2>")
+        document.write("<h2>"+a1[1]+"</h2>")
+        document.write("<h2>"+a1[2]+"</h2>")
+        document.write("<h2>"+a1[3]+"</h2>")
+        a1[0] = 'Dooly'
+        document.write("<h2>"+a1[0]+"</h2>")
+        document.write("<h2>"+a1[1]+"</h2>")
+        document.write("<h2>"+a1[2]+"</h2>")
+
+        a2 = new Array()
+        //a2 = []
+        for (i=0;i<5;i++){
+            a2[i] = i * 11
+        }
+        document.write("<h2>배열의 길이 "+a2.length+"</h2>")
+        document.write("<h2>배열 "+a2+"</h2>")
+        for (i=0;i<5;i++){
+            document.write("<h3>"+a2[i]+"</h3>")
+        }
+
+        //다차원배열
+        friend=[
+            ["길냥이","고양이과","야옹"],
+            ["댕댕이","개과","왈왈"],
+            ["괴물","크와아아아악"]
+        ]
+        document.write("<h3>"+friend.length+"</h3>")
+        document.write("<h3>"+friend[0]+"</h3>")
+        document.write("<h3>"+friend[1]+"</h3>")
+        document.write("<h3>"+friend[2]+"</h3>")
+        document.write("<h3>"+friend[2][1]+"</h3>")
+
+        for(i=0;i<friend.length;i++){
+            document.write("<h3>"+friend[i]+"</h3>")
+            for(j=0;j<friend[i].length;j++){
+                document.write("<h4>"+friend[i][j]+"</h4>")
+            }
+        }
+
+        s5 = "막시무스,15세,순둥함"
+        s6 = s5.split(',')  //array로 반환
+        document.write(s6)
+        for (i=0;i<s6.length;i++){
+            document.write("<h3>"+s6[i]+"</h3>")
+        }
+
+        //Math
+        document.write("<h4>"+Math.PI+"</h4>")
+        document.write("<h4>"+Math.round(3.7)+"</h4>")
+        document.write("<h4>"+Math.ceil(3.7)+"</h4>")
+        document.write("<h4>"+Math.floor(3.7)+"</h4>")
+        document.write("<h4>"+Math.abs(-1234)+"</h4>")
+        document.write("<h4>"+Math.max(100,10)+"</h4>")
+        document.write("<h4>"+Math.min(100,10)+"</h4>")
+        document.write("<h4>"+Math.random()+"</h4>")
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
