@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //json(JavaScript Object Notation)
+        //문법은 자바스크립트, 언어로부터 독립적
+        //변수 = {key1:value1, key2:value2, ..}
+        // a1 = {
+        //     name:'둘리',
+        //     age : 5,
+        //     gender : '남',
+        //     visual : '귀여움'
+        // }
+        // document.write("<h3>"+a1.name+"</h3>")
+        // document.write("<h3>"+a1.age+"</h3>")
+        // document.write("<h3>"+a1.gender+"</h3>")
+        // document.write("<h3>"+a1.visual+"</h3>")
+        function f1() {
+            a1 = {
+                name: '둘리',
+                age: 5,
+                gender: '남',
+                visual: '귀여움',
+                family: ['고길동', '희동이', '도너', '또치'],
+                food: ['순대국밥', '알리오올리오']
+            }
+            document.getElementById("name").innerHTML=a1.name
+            document.getElementById("v").innerHTML=a1.visual
+            document.getElementById("a").innerHTML=a1.age
+            
+            str = '<ul>'
+            for (i=0;i<a1.family.length;i++){
+                str = str + '<li>'+a1.family[i]+'</li>'
+            }
+            str = str + '</ul>'
+            document.getElementById("fa").innerHTML=str
+            str = '<ul>'
+            for (i=0;i<a1.food.length;i++){
+                str = str + '<li>'+a1.food[i]+'</li>'
+            }
+            str = str + '</ul>'
+            document.getElementById("fo").innerHTML=str
+            f2()
+        }
+        function f2(){
+            keyword={
+                r1:{k:'java',p:10000,maxp:50000},
+                r2:{k:'python',p:3000,maxp:30000},
+                r3:{k:'구로동자바',p:100,maxp:10000}
+            }
+            str = "<ul>"
+            str = str+"<li>"+keyword.r1.k+", "+keyword.r1.p+", "+keyword.r1.maxp+"</li>"
+            str = str+"<li>"+keyword.r2.k+", "+keyword.r2.p+", "+keyword.r2.maxp+"</li>"
+            str = str+"<li>"+keyword.r3.k+", "+keyword.r3.p+", "+keyword.r3.maxp+"</li></ul>"
+            
+            document.getElementById("rank").innerHTML=str
+            f3()
+        }
+        function f3(){
+            board={
+                title:"학습게시판",
+                total:3,
+                content:[
+                    {no:1,subject:'jquery는 언제하나요',view:2},
+                    {no:2,subject:'html과 css',view:1},
+                    {no:3,subject:'python',view:3},
+                ]
+            }
+
+            key1=Object.keys(board) //json key값 추출
+            alert("board의 keys : "+key1)
+            
+            document.getElementById("title").innerHTML=board.title
+            document.getElementById("total").innerHTML=board.total
+
+            str = "<ul>"
+            for(i=0;i<board.content.length;i++){
+                str = str +"<li>"+board.content[i].no+", "+board.content[i].subject+
+                    ", "+board.content[i].view+"</li>"
+                key2=Object.keys(board.content[i])
+                alert(i+"번 content의 keys : "+key2)
+            }
+            str = str + "</ul>"
+            document.getElementById("c").innerHTML=str
+      
+            
+        }
+    </script>
+</head>
+
+<body onload="f1()">
+    <h1 id="name"></h1>
+    <hr>
+    <p><strong>외모 : </strong><span id="v"></span></p>
+    <p><strong>나이 : </strong><span id="a"></span></p>
+    <p><strong>가족 : </strong><span id="fa"></span></p>
+    <p><strong>음식 : </strong><span id="fo"></span></p>
+    <hr>
+    <h1>검색어 순위</h1>
+    <div id="rank"></div>
+    <hr>
+    <h1>공지사항</h1>
+    <div id="title"></div>
+    <div id="total">게시글: <span id="n"></span></div>
+    <div id="c"></div>
+</body>
+
+</html>

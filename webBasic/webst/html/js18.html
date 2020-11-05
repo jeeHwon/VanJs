@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one{
+            width: 200px;
+            height: 200px;
+            background:cornflowerblue;
+        }
+        #two{
+            width: 200px;
+            height: 200px;
+            background:aquamarine;
+        }
+    </style>
+    <script>
+        //브라우저 제어를 위한 내장객체
+        //1) window객체 : 자바스크립트의 최상위 객체
+        //  내장객체 접급시 window.내장객체명.함수이름()
+        //  모든 객체가 윈도우 안에 내장되어 있으므로 생략가능
+        //  window.document.write = document.write
+        //2)document객체 : html의 내용제어, css제어
+        //3)form객체
+        //4)image객체
+        function f1(){
+            document.getElementById("one").style.backgroundColor="cornflowerblue"
+        }
+        function f2(){
+            document.getElementById("one").style.backgroundColor="pink"
+        }
+    </script>
+</head>
+<body>
+    <h1>document객체</h1>
+    <div id="one" class="first" onmouseover="f1()" onmouseout="f2()">test01</div>
+    <div id="two" class="first">test02</div>
+</body>
+</html>
