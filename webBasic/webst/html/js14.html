@@ -8,7 +8,7 @@
         function idfocus() {
             document.member.userid.focus()
         }
-        function emailchk(){
+        function emailchk() {
             document.member.emailadr.value = document.member.domain[document.member.domain.selectedIndex].value
         }
         function frmchk() {
@@ -29,43 +29,43 @@
                 frm.pw2.focus()
                 return false
             }
-            
-            if (frm.emailadr.value.indexOf('.')==-1) {
+
+            if (frm.emailadr.value.indexOf('.') == -1) {
                 alert("이메일을 정확히 하세요")
                 return false
             }
-            
+
             //취미 선택여부 검사
-            hobbychk=false;
-            for(i=0;i<frm.hobby.length;i++){
-                if (frm.hobby[i].checked){
-                    hobbychk=true
+            hobbychk = false;
+            for (i = 0; i < frm.hobby.length; i++) {
+                if (frm.hobby[i].checked) {
+                    hobbychk = true
                     break
                 }
             }
-            if(!hobbychk){
+            if (!hobbychk) {
                 alert("취미는 1개이상 선택해주세요")
                 return false
             }
 
             //직업선택유무 확인
-            if(frm.job.value=="ff"){
+            if (frm.job.value == "ff") {
                 alert("직업을 선택해주세요")
                 return false
             }
 
-            if(confrim("가입하시겠습니까?")){
-                frm.submit()
-                return false
+            if (confirm("가입하시겠습니까?")) {
+                frm.submit();
             }
-            
+
         }
+
     </script>
 </head>
 
 <body onload="idfocus()">
     <!-- 1015-2로 가는 액션이 안먹힘 해결필요 다하고 리턴 false까지 -->
-    <form name="member" action="1015-2.html">
+    <form name="member" action="1015-2.html" method="post" onsubmit="return false">
         <table width="800" border="1">
             <form name="signin">
                 <tr>
@@ -74,7 +74,7 @@
                 <tr>
                     <td width="20%">사용자ID</td>
                     <td>
-                        <input type="text" name="userid" maxlength="10" id="userid">
+                        <input type="text" name="userid" maxlength="10" id="userid" onkeypress="idchk()">
                         <input type="button" value="중복확인">
                     </td>
                 </tr>

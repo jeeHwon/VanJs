@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function init(){
+            document.getElementById("two").innerHTML="화면이 로드되었습니다"
+        }
+    </script>
+</head>
+<body>
+    <div id="one">
+        <p id="two">클릭하세요</p>
+    </div>
+    <pre>
+    html과 자바스크립트의 분리
+    </pre>
+    <script>
+        window.onload = function(){
+            document.getElementById("two").innerHTML="화면이 로드되었습니다"
+        }
+        p=document.getElementById("two")
+        p.onclick =function(){
+            alert('클릭')
+        }
+        p.onmouseover = function(){alert('mouse in')}
+        p.onmouseout = function(){alert('mouse out')}
+        p.onmouseup = function(){alert('mouse up')}
+        p.onmousedown = function(){alert('mouse down')}
+        window.oncontextmenu=function(){
+            return false
+        }
+    </script>
+    
+</body>
+</html>

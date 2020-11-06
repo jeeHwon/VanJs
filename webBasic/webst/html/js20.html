@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write('<p>문서의 url주소'+location.href+'</p>')
+        document.write('<p>호스트이름과 포트'+location.host+'</p>')
+        document.write('<p>컴퓨터이름'+location.hostname+'</p>')
+        document.write('<p>디렉토리이하 경로'+location.pathname+'</p>')
+        document.write('<p>포트'+location.port+'</p>')
+        document.write('<p>프로토콜'+location.protocol+'</p>')
+
+        function f1(){
+            if (confirm('이동하시겠습니까?')){
+                location.href="http://www.naver.com"
+            }
+
+        }
+        document.write('<h1>브라우저 정보</h1>')
+        document.write('<p>브라우저 이름'+navigator.appName+'</p>')
+        document.write('<p>브라우저 코드명'+navigator.appCodeName+'</p>')
+        document.write('<p>플랫폼'+navigator.platform+'</p>')
+        document.write('<p>사용자정보'+navigator.userAgent+'</p>')
+        document.write('<p>브라우저 버전'+navigator.appVersion+'</p>')
+
+        document.write('<h1>스크린정보</h1>')
+        document.write('<p>화면너비'+screen.availWidth+'</p>')
+        document.write('<p>화면높이'+screen.availHeight+'</p>')
+        document.write('<p>픽셀당높이'+screen.height+'</p>')
+        document.write('<p>픽셀당너비'+screen.width+'</p>')
+        
+      
+
+        
+    </script>
+</head>
+<body>
+    <pre>
+        location 객체 : 브라우저의 주소줄을 제어
+        navigator 객체 : 브라우저 정보조회
+        screen 객체 : 
+    </pre>
+    <a href="js20.html?a=1&b=3">다시</a><br>
+    <a href="#" onclick="f1()">네이버로</a>
+    <hr>
+    <p id="size">윈도우크기</p>
+    <script>
+        window.onresize=function(){
+            size = document.getElementById('size')
+            size.innerHTML=window.innerWidth+"X"+window.innerHeight
+        }
+    </script>
+</body>
+</html>

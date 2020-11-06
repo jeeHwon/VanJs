@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {float:left;list-style: none;width: 250px;height: 500px;}
+        li img {width: 200px;height: 100px;}
+        .view{float: left;width: 500px;height: 500px;}
+        .view img {width: 500px;height: 500px;}
+    </style>
+    <script>
+        function f1(i) {
+            imgs=["../image/7.jpg","../image/8.jpg","../image/9.jpg"]
+            tag = document.getElementById("target")
+            tag.src=imgs[i]
+        }
+    </script>
+</head>
+<body>
+    <ul class="one">
+        <li><a heref="#" onclick="f1(0)"><img src="../image/7.jpg"></a></li>
+        <li><a heref="#" onclick="f1(1)"><img src="../image/8.jpg"></a></li>
+        <li><a heref="#" onclick="f1(2)"><img src="../image/9.jpg"></a></li>
+        <li><a heref="#" onclick="f1(2)"><img src="../image/10.jpg"></a></li>
+        <li><a heref="#" onclick="f1(2)"><img src="../image/11.jpg"></a></li>
+        
+    </ul>
+    <div class="view">
+        <img src="../image/5.jpg" id="target">
+    </div>
+</body>
+</html>

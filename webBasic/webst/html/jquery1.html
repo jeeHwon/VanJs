@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="jquery-3.5.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        //function f1(){alert("hi~ jQuery")}
+        //jQuery(f1)
+        //$('h1').html('환영합니다')
+    </script>
+</head>
+<body>
+    <h1>jQuery : 자바스크립트 라이브러리</h1>
+    <h2 id="id1">작은제목1</h2>
+    <h2 class="cl1">작은제목2</h2>
+    <hr>
+    <div class="cl2">
+        <p>자식,형제 선택자</p>
+        <h3>텔레토비 가족</h3>
+        <p>보라돌이</p>
+        <p>뚜비</p>
+        <p>나나</p>
+        <p>뽀</p>
+    </div>
+    <hr>
+    <input type="text">회원번호
+    <input type="password">비밀번호
+
+    <script>
+        $('h1').html('환영합니다')
+        $('h1').css('background','crimson').css('color','white')
+        $('#id1').css('color','blue')
+        $('.cl1').css('color','green')
+        //자식선택자
+        $('.cl2 > p').css('background','gold')  
+        //형제선택자
+        $('h3 ~ p').css('background','brown')  //h3다음 모든p
+        $('h3 + p').css('background','silver')  //h3다음 p하나만
+        //속성선택자
+        $('input').css('background','ivory')
+        $('input[type=password]').css('background','purple')
+
+
+
+    </script>
+    <pre>
+        
+        --환경설정
+        1)다운로드 받아 연결
+        <!-- <script src="jquery-3.5.1.min.js"></script> -->
+        2)cdn : contents delivery network
+
+        --주요코드
+        document.getElementById('id값') --> $(선택자)
+        innerHTML --> html()
+        --
+        $ : jQuery의 모든 기능을 가지고 있는 객체이자 함수
+        
+
+
+
+    </pre>
+    
+</body>
+</html>
