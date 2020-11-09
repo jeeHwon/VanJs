@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</head>
+
+<body>
+    <pre>
+        1)형식 :$.each(object,function(index,item){})
+        2)형식 :$.(selector).each(function(index,item){})
+    </pre>
+    <hr>
+    <script>
+        // a1=['사과','배','감','복숭아']
+        // $.each(a1,function(index,item){
+        //     alert(index+','+item)
+        // })
+        // a2=[{name:'apple', price:2000},
+        //     {name:'peach', price:3000},
+        //     {name:'melon', price:6000}]
+        // $.each(a2,function(index,item){
+        //     // alert(index+','+item)   //item자체는 json문서
+        //     str = item.name+','+item.price
+        //     alert(str)
+        // })
+        j1={name:'개츠비',addr:'뉴욕',house:'대저택'}
+        $.each(j1,function(index,item){ //json 전달
+            // alert(index+','+item)   //index-키, item-값
+        })
+    </script>
+    <hr>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+        <li>seven</li>
+        <li>eight</li>
+        <li>nine</li>
+    </ul>
+    <script>
+        $('li').each(function(index,item){
+            // alert(index+','+item)
+            $(item).addClass('c'+index)
+            $(this).addClass('d'+index)
+        })
+    </script>
+    <hr>
+    <h3>one</h3>
+    <h3>two</h3>
+    <h3>three</h3>
+    <script>    
+        colors=['red', 'green', 'blue']
+        $('h3').each(function(index,item){
+            $(this).css('background', colors[index])
+        })
+    </script>
+    <p>지리산에 <strong>호랑이</strong>가 있다</p>
+    <p>지리산에 <span><strong>호랑이</strong></span>가 있다</p>
+    <div>백두산에 <strong>살쾡이</strong>가 있다</div>
+    <p>지리산에 <strong>무서운 호랑이</strong>가 별주부를 향해 내려오고 있다</p>
+    <script>
+        //$('p').find('strong').css('background','brown') //p 아래 모든 strong
+        //$('p').children('strong').css('background','gray') //p 바로 아래 strong
+        $('p > strong').css('background','brown')
+        $('p').each(function(index,item){
+            //alert($(this).text())
+            if($(this).text().length>15){
+                $(this).find('strong').css('color','gold')
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>

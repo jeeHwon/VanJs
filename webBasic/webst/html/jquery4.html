@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #test {
+            width: 200px;
+            height: 100px;
+            background-color: chocolate;
+        }
+
+        #result {
+            width: 200px;
+            height: 100px;
+            background-color: darkcyan;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function () {
+            // $('#test').mouseenter(function(){
+            //     $('#result').html('mouse in')
+            // })
+            // $('#test').mouseleave(function(){
+            //     $('#result').html('mouse out')
+            // })
+
+            //$('#test').hover(function(){},function(){}) : 두가지 정의가능
+            $('#test').hover(function () {
+                $('#result').html('mouse in')
+            }, function () {
+                $('#result').html('mouse out')
+            })
+
+            $('#test').click(function () {
+                $('#result').html('mouse click')
+            })
+            $('#test').dblclick(function () {
+                $('#result').html('mouse double click')
+            })
+
+            // $('input[type="text"]').keypress(function(){    //keydown+keyup
+            //     $('#result').html('key press')
+            // })
+            $('input[type="text"]').keydown(function () {
+                $('#result').html('key down')
+            })
+            $('input[type="text"]').keyup(function () {
+                $('#result').html('key up')
+            })
+
+        })
+    </script>
+
+</head>
+
+<body>
+    <h1>이벤트 확인</h1>
+    <div id="test">
+        여기로 오쇼
+    </div>
+    <h1>이벤트 결과</h1>
+    <div id="result">
+    </div>
+    <hr>
+    이름 : <input type="text" name="irum">
+
+</body>
+
+</html>
