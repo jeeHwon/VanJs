@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        // $(function(){
+        //     $(window).resize(function(){
+        //         $('#result').html("<p>"+$(window).width()+"x"+$(window).height())
+        //     })
+        // })
+        $(function () {
+            // alert('attr : '+$("img").attr("src"))
+            // alert('prop : '+$("img").prop("src"))
+            //alert('attr : '+$("a").attr("href"))
+            //alert('prop : '+$("a").prop("href"))
+
+            str1 = "C:\\Users\\admin\\Downloads\\GirlGroupImg\\MS\\아이유\\"
+            str2 = ".jpg"
+            i = 1
+            $('img').click(function () {
+                i = i + 1
+                str = str1 + i + str2
+                $(this).attr('src', str)
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <pre>
+        1)attr : HTML 의 속성(attribute)을 취급
+            -> 속성은 HTML Element에 있는 정보
+        2)prop : JavaScript의 프로퍼티(property)를 취급
+            ->프로퍼티는 JavaScript에서 사용하는 정보
+                (HTML의 정보와 일치 또는 불일치)
+
+        $(선택자).attr(속성이름) : 속성값 가져오기
+        $(선택자).attr(속성이름,값) : 속성에 값 넣어주기
+        $(선택자).prop(속성이름[,값]) : 자바스크립트 입장에서의 속성
+    </pre>
+    <img src="C:\\Users\\admin\\Downloads\\GirlGroupImg\\MS\\아이유\\1.jpg" alt="IU" width="500px">
+    <hr>
+    <div id="result"></div>
+    <hr>
+    <a href="#">링크</a>
+    <hr>
+    <label for="">정보수신</label>
+    <input type="checkbox" id="info">
+    <p id="one"></p>
+    <script>
+        $('#info').change(function () {
+            $('#one').html(
+                'attr : ' + $(this).attr('checked') + '<br>' +
+                'prop : ' + $(this).prop('checked') + '<br>' +
+                'is : ' + $(this).is(':checked') + '<br>'
+            )
+        })
+    </script>
+    <hr>
+    <h1>전체 선택 기능</h1>
+    <form name="frm1">
+        <fieldset>
+            <legend>취미</legend>
+            <p>
+                <input type="checkbox" id="all">
+                <label for="all">전체선택</label>
+            </p>
+            <p>
+                <input type="checkbox" id="hobby1" class="hobby" value="서핑">서핑<br>
+                <input type="checkbox" id="hobby2" class="hobby" value="프리다이빙">프리다이빙<br>
+                <input type="checkbox" id="hobby3" class="hobby" value="영화감상">영화감상<br>
+                <input type="checkbox" id="hobby4" class="hobby" value="독서">독서<br>
+                <input type="checkbox" id="hobby5" class="hobby" value="테니스">테니스<br>
+            </p>
+
+        </fieldset>
+    </form>
+    <script>
+        $('#all').change(function () {
+            //alert($(this).prop('checked'))
+            $('.hobby').prop('checked', $(this).prop('checked'))
+        })
+    </script>
+    <hr>
+    <form name="frm2">
+        <input type="checkbox" id="uploadok">이미지 등록<br>
+        사진<input type="file" id="f1" disabled>
+    </form>
+    <script>
+        $('#uploadok').change(function(){
+            //alert($(this).is(':checked'))
+            $('#f1').prop('disabled',!($(this).is(':checked')))
+        })
+    </script>
+
+</body>
+
+</html>

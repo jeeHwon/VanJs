@@ -7,32 +7,40 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-
         $(function () {
-            $('#id').focus()
-            // $('input[type="text"]').keydown(function (e) {
-            //     $('#result').html(e.which + 'key down')
-            //     if (e.which == 13)
-            //         $('input[type="password"]').focus()
-            // })
-            $('input[type="password"]').blur(function () { //focus 잃을때 동작
-                $('#result').html('focus out')
+            $('input[type="reset"]').click(function () {
+                if (!confirm('정말로 초기화?')) { //확인말고 취소 누를경우
+                    return false;   //리셋을 안하게 false값 리턴
+                }
             })
-            $('#id').keydown(function (e) {
-                if (e.which == 13) {
+
+            $('#frm input[type=submit]').bind('click', function (e) {
+                e.preventDefault();
+
+
+                //     $('#result').html(e.which + 'key down')
+                //     if (e.which == 13)
+                //         $('input[type="password"]').focus()
+                // })
+                // $('input[type="password"]').blur(function () { //focus 잃을때 동작
+                //     $('#result').html('focus out')
+                // })
+
+                // $('#frm').submit(function () {
+                //alert('전송')
+                if (!$('#id').val()) {
+                    alert('아이디를 입력하세요')
+                    $('#id').focus()
+                    return false
+                }
+                if (!$('#pw').val()) {
+                    alert('비밀번호를 입력하세요')
                     $('#pw').focus()
                     return false
                 }
-            })
-            $('#frm').submit(function () {
-                //alert('전송')
-                if (!$('#id').val()) {
-                    alert('아이디입력')
-                    $('#id').focus()
-                }
-                if (!$('#pw').val()) {
-                    alert('비번입력')
-                    $('#pw').focus()
+                if (!$('#jumin').val()) {
+                    alert('주민번호를 입력하세요')
+                    $('#jumin').focus()
                     return false
                 }
                 if (!$('input[name="gender"]').is(":checked")) {
@@ -43,24 +51,47 @@
                     alert('취미를 선택하세요')
                     return false
                 }
-                if($('select[name="job"]>option:selected').index()<1){
+                if ($('select[name="job"]>option:selected').index() < 1) {
                     alert('직업을 선택하세요')
                     return false
                 }
-                return false
-            })
+                //모든 form data값을 string으로 받기
+                str = '아이디: ' + $('#id').val() + '\n'
+                str = str + '비밀번호: ' + $('#pw').val() + '\n'
+                str = str + '주민번호: ' + $('#jumin').val() + '\n'
+                str = str + '성별: ' + $('input[name="gender"]:checked').val() + '\n'
+                hobby = $('input[name="hobby"]:checked')
+                hobbystr = '취미: '
+                hobby.each(function (index, item) {
+                    hobbystr = hobbystr + $(this).val() + " "
+                })
 
+                // $('#id').keydown(function (e) {
+                //     if (e.which == 13) {
+                //         $('#pw').focus()
+                //         return false
+                //     }
+                // })
 
+                str = str + hobbystr + '\n'
+                str = str + '직업: ' + $('select[name="job"]>option:selected').val() + '\n'
+
+                if (!confirm('가입하시겠습니까?')) {
+                    return false;
+                }
+
+                $('#frm').submit();
+            });
         })
     </script>
 </head>
 
 <body>
     <h1>회원가입</h1>
-    <form action="" id="frm">
+    <form action="1015.html" id="frm">
         아이디 <input type="text" name="id" id="id"><br>
         비밀번호 <input type="password" name="pw" id="pw"><br>
-        주민번호 <input type="text" name="jumin" id="juming"><br>
+        주민번호 <input type="text" name="jumin" id="jumin"><br>
         성별 <input type="radio" name="gender" value="남">남
         <input type="radio" name="gender" value="여">여<br>
         취미 <input type="checkbox" name="hobby" value="독서">독서

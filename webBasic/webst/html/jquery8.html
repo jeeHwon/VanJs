@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 20px;
+        }
+        ul {
+            list-style: none;
+        }
+
+        li {
+            float: left;
+            width: 150px;
+            text-align: left;
+            display: inline;
+        }
+
+        a {
+            color: darkblue;
+            text-decoration: none;
+        }
+
+        ul:after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+
+        .hover {
+            color: cornflowerblue;
+            font-weight: 900;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">oracle</a></li>
+        <li><a href="#">html5</a></li>
+        <li><a href="#">css3</a></li>
+        <li><a href="#">javascript</a></li>
+        <li><a href="#">jquery</a></li>
+    </ul>
+    <script>
+    $(function(){
+        $('li>a').hover(
+            function () {
+                $(this).addClass('hover')
+            },
+            function () {
+                $(this).removeClass('hover')
+            }
+        )
+    })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .enter{background: olivedrab;}
+        #detail{display: none;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <pre>
+        $(선택자).addClass(클래스명) : 클래스 적용
+        $(선택자).removeClass(클래스명) : 클래스 해제
+        $(선택자).removeAttr(속성명) : 속성 자체를 없애기
+        ---------------------------------------------
+        $(선택자).toggle() : show()와 hide()를 반복처리
+        $(선택자).show() : 화면에 표시
+        $(선택자).hide() : 화면에서 숨김
+
+        $(선택자).toggle(숫자) : 지정된 숫자시간 동안 처리, 1/1000초
+    </pre>
+    <h1>케이블카</h1>
+    <h3>설악산</h3>
+    <h3>남산</h3>
+    <h3>역도산</h3>
+    <h3>아황산</h3>
+    <hr>
+    <h2 class="enter one">케이블카의 장점</h2>
+    <a href="#" id="view">자세히 보기</a>
+    <div id="detail">
+        아라치 아라쵸 아리치치쵸쵸쵸시스붐바헤이연세얏
+    </div>
+    <script>
+        $('#view').click(function(){
+            //$('#detail').hide()
+            $('#detail').toggle()
+        })
+    </script>
+    <script>
+        //$('h2').removeClass('enter')
+        $('h2').removeAttr('class')
+    </script>
+    <script>
+        //$('h3').hover(function(){},function(){}) 
+        //hover는 mouse in out function 두개 설정해준다
+        //내용, 동작, 모양, 분리 안된 version
+        // $('h3').hover(
+        //     function () {
+        //         $(this).css('background', 'olive')
+        //     },
+        //     function () {
+        //         $(this).css('background', 'white')
+        //     }
+        // )
+
+        //내용, 동작, 모양, 분리 된 version
+        $('h3').hover(
+            function () {
+                $(this).addClass('enter')
+            },
+            function () {
+                $(this).removeClass('enter')
+            }
+        )
+    </script>
+
+    <hr>
+    <h1>show-hide</h1>
+    <input type="button" value="show" id="f1">
+    <input type="button" value="hide" id="f2">
+    <input type="button" value="toggle" id="f3">
+    <div>
+        <img src="C:\\Users\\admin\\Downloads\\GirlGroupImg\\MS\\아이유\\1.jpg" alt="IU" width="200px" >
+    </div>
+    <script>
+        $('#f1').click(function(){
+            $('div>img').show()
+        })
+        $('#f2').click(function(){
+            $('div>img').hide()
+        })
+        $('#f3').click(function(){
+            $('div>img').toggle(500)
+        })
+    </script>
+    <hr>
+    <h1>show-hide effect</h1>
+    <input type="button" value="show" id="f4">
+    <input type="button" value="hide" id="f5">
+    <input type="button" value="toggle" id="f6">
+    <p id="one">
+        <img src="C:\\Users\\admin\\Downloads\\GirlGroupImg\\MS\\아이유\\2.jpg" alt="IU" width="200px" >
+    </p>
+    <script>
+        $('#f4').click(function(){
+            //$('#one>img').fadeIn(1000)
+            $('#one>img').slideDown(1000)
+        })
+        $('#f5').click(function(){
+            //$('#one>img').fadeOut(1000)
+            $('#one>img').slideUp(1000)
+        })
+        $('#f6').click(function(){
+            //$('#one>img').fadeToggle(1000)
+            $('#one>img').slideToggle(1000)
+        })
+    </script>
+
+
+</body>
+
+</html>
