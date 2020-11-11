@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul.main>li {
+            float: left;
+            width: 150px;
+            height: 50px;
+            /* text-align:center; */
+            background: cadetblue;
+        }
+
+        ul.main::after {
+            content: '';
+            display: none;
+            clear: both;
+        }
+
+        .main li a {
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            font-weight: 900;
+            display: block;
+            text-align: center;
+        }
+
+        .main li a:hover {
+            background: cornflowerblue;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.sub').hide()
+            $('.main > li').hover(
+                function () {
+                    $(this).find('.sub').show()
+                },
+                function () {
+                    $(this).find('.sub').hide()
+                }
+            )
+        })
+    </script>
+</head>
+
+<body>
+    <ul class="main">
+        <li><a href="#">oracle</a>
+            <ul class="sub">
+                <li><a href="#">오라클설치</a></li>
+                <li><a href="#">sql</a></li>
+                <li><a href="#">pl/sql</a></li>
+            </ul>
+        </li>
+        <li><a href="#">html5</a>
+            <ul class="sub">
+                <li><a href="#">기본태그</a></li>
+                <li><a href="#">폼태그</a></li>
+                <li><a href="#">시멘틱태그</a></li>
+            </ul>
+        </li>
+        <li><a href="#">css3</a>
+            <ul class="sub">
+                <li><a href="#">글자,바탕색</a></li>
+                <li><a href="#">레이아웃</a></li>
+                <li><a href="#">선택자</a></li>
+            </ul>
+        </li>
+        <li><a href="#">javascript</a>
+            <ul class="sub">
+                <li><a href="#">기본문법</a></li>
+                <li><a href="#">함수</a></li>
+                <li><a href="#">객체</a></li>
+            </ul>
+        </li>
+        <li><a href="#">jquery</a>
+            <ul class="sub">
+                <li><a href="#">환경설정</a></li>
+                <li><a href="#">함수</a></li>
+                <li><a href="#">동적생성</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

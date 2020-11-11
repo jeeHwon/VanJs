@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="one">첫번째 div
+        <p class="two">
+            두번째 p
+            <a href="1015-1.html" class="three">세번째 a</a>
+            <span class="four">네번째 span</span>
+            <a href="1015-2.html" class="five">다섯번째 a</a>
+        </p>
+    </div>
+    <script>
+        $('.one').click(function(){
+            alert('첫번째 div click')
+        })
+        $('.two').click(function(){
+            alert('두번째 p click')
+        })
+        $('.three').click(function(e){
+            e.preventDefault()  //href로 넘어가는 동작 중단 
+            e.stopPropagation() //두번째 첫번째로 넘어가는 이벤트 전파 중지
+            alert('세번째 a click')
+        })
+        $('.four').click(function(e){
+            alert('네번째 span 1click')
+            e.stopImmediatePropagation()
+        })
+        $('.four').click(function(e){
+            alert('네번째 span 2click')
+        })
+        $('.five').click(function(e){
+            alert('다섯번째 a click')
+            return false
+        })
+
+
+    </script>
+    <hr>
+    <pre>
+        이벤트 처리막기
+            1) e.preventDefault() : 고유동작 중단
+            2) e.stopPropagation() : 이벤트 상위 전파 중지
+            3) e.stopImmediatePropagation() : 상위뿐 아니라 같은 레벨로도 전파 중지
+            4) return false
+                jquery 사용시 : e.preventDefault() + e.stopPropagation()
+                jquery 미사용시 : e.preventDefault()
+
+    </pre>
+
+</body>
+</html>
