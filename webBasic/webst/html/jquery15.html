@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function (ev) {
+            $('#frm1').submit(function (e) {
+                if (!$('#name').val()) {
+                    alert('이름을 입력하세요')
+                    $('#name').focus()
+                    e.preventDefault()
+                    return
+                }
+                if (!$('#content').val()) {
+                    alert('내용을 입력하세요')
+                    $('#content').focus()
+                    e.preventDefault()
+                    return
+                }
+                now = new Date()
+                yy = now.getFullYear()
+                mm = now.getMonth() + 1
+                dd = now.getDate()
+                hh = now.getHours()
+                mi = now.getMinutes()
+                ss = now.getSeconds()
+
+                if (mm < 10) { mm = "0" + mm }
+                if (dd < 10) { dd = "0" + dd }
+                if (hh < 10) { hh = "0" + hh }
+                if (mi < 10) { mi = "0" + mi }
+                if (ss < 10) { ss = "0" + ss }
+                nowstr = yy + "년 " + mm + "월 " + dd + "일 " + hh + ":" + mi + ":" + ss
+
+                name = $('#name').val()
+                content = $('#content').val()
+
+                li = $('<li>').addClass('list')
+                p1 = $('<p>')
+
+                span1 = $('<span>').html(name + "님 ")
+                span2 = $('<span>').html(nowstr)
+                input = $('<input>').attr('type', 'button').attr('value', '삭제').addClass('del')
+
+                p1.append(span1).append(span2).append(input)
+                p2 = $('<p>').html($('#content').val())
+
+                li.append(p1).append(p2)
+                $('ul').append(li)
+                $('#name').val('')
+                $('#content').val('')
+
+                e.preventDefault()
+                return
+            })
+            // one() : 동적으로 추가할 요소에 대한 이벤트를 미리 정의해 놓는 기능
+            //이벤트가 정의되는 시점에는 대상이 존재하지 않음. 이 이벤트는 document 객체에 설정
+            //$(document).on('이벤트','선택자',function(){})
+            $(document).on('click', '.del', function () {
+                if (confirm('삭제하시겠습니까?')) {
+                    $(this).parents('.list').remove()
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <h1>동적추가2</h1>
+    <div id="one">
+        <form id="frm1">
+            <div>
+                작성자
+                <input type="text" name="name" id="name">
+                <input type="submit" value="저장하기">
+
+            </div>
+            <div>
+                덧글 내용
+                <textarea name="content" id="content" cols="30" rows="10"></textarea>
+            </div>
+        </form>
+    </div>
+    <ul id="result"></ul>
+    <pre>
+        A.append(B) : A에 B를 추가하다
+        B.appendTo(A) : B를 A에 추가하다
+        B.remove() : B를 제거
+    </pre>
+</body>
+
+</html>

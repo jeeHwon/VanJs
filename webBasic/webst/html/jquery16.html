@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function () { //얘 없이 가면 add가 뭐여? 한다. 순서 중요!
+            //동적추가3
+            // <div id="div?">
+            //     <span>첨부파일?</span>
+            //     <input type="file" name="file?" id="file?" >
+            //     <input type="button" class="del" value="삭제">
+            // </div>
+            index = 0
+            $('#add').click(function () {
+                index++
+                div = $('<div>').attr('id','div'+index)
+                span = $('<span>').html("첨부파일" + index)
+                input1 = $('<input>').attr('type', 'file').attr('name', 'file' + index).attr('id', 'file' + index)
+                input2 = $('<input>').attr('type', 'button').attr('value', '삭제').addClass('del')
+
+                div.append(span).append(input1).append(input2)
+                $('#container').append(div)
+
+            })
+            $(document).on('click', '.del', function () {
+                $(this).parent('').remove()
+                index--
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>첨부파일</h1>
+        <div>
+            <input type="file" name="file1" id="file1">
+            <input type="button" id="add" value="추가">
+        </div>
+    </div>
+
+</body>
+
+</html>
