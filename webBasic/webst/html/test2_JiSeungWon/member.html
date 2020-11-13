@@ -49,6 +49,11 @@
                     $('#phone2').focus()
                     return false
                 }
+                //성별선택 여부 확인
+                if (!$('input:radio[name="gender"]').is(":checked")) {
+                    alert('성별을 선택하세요')
+                    return false
+                }
                 //관심분야 여부 확인
                 if (!$('input[name="inter"]').is(":checked")) {
                     alert('관심분야를 선택하세요')

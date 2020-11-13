@@ -10,11 +10,8 @@
         $(function () {
             $('.sub').hide();
 
-
             $(document).on('change', '#food', function () {
                 $('.sub').hide();
-
-
                 if ($('select[name="food"]>option:selected').index() == 1) {
                     $('#select_kr').show();
 
@@ -45,18 +42,7 @@
                     alert("좋아하는 음식은 " + $("#select_gt option:selected").text() + "입니다")
                 }
             })
-
-
-
-
-
         })
-
-
-
-
-
-
     </script>
 </head>
 
@@ -89,10 +75,6 @@
         <option value="">짜장면</option>
         <option value="">만두</option>
     </select>
-
-
-
-
 </body>
 
 </html>
