@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $('#kind').change(function(){
+                // alert($('option:selected').index())
+                $('#kind2').remove()
+                if($('option:selected').index()==1){
+                    select=$('<select>').attr('id','kind2')
+                    option1=$('<option>').attr('value','').html('--선택--')
+                    option2=$('<option>').attr('value','불고기').html('불고기')
+                    option3=$('<option>').attr('value','구절판').html('구절판')
+                    option4=$('<option>').attr('value','순두부찌개').html('순두부찌개')
+                    select.append(option1).append(option2).append(option3).append(option4)
+                    $('#food').append(select)
+                }else if ($('option:selected').index()==2){
+                    select=$('<select>').attr('id','kind2')
+                    option1=$('<option>').attr('value','').html('--선택--')
+                    option2=$('<option>').attr('value','짜장면').html('짜장면')
+                    option3=$('<option>').attr('value','짬뽕').html('짬뽕')
+                    option4=$('<option>').attr('value','탕수육').html('탕수육')
+                    select.append(option1).append(option2).append(option3).append(option4)
+                    $('#food').append(select)
+                } else if($('option:selected').index()==3){
+                    select=$('<select>').attr('id','kind2')
+                    option1=$('<option>').attr('value','').html('--선택--')
+                    option2=$('<option>').attr('value','알리오올리오').html('알리오올리오')
+                    option3=$('<option>').attr('value','감바스').html('감바스')
+                    option4=$('<option>').attr('value','라따뚜이').html('라따뚜이')
+                    select.append(option1).append(option2).append(option3).append(option4)
+                    $('#food').append(select)
+                }
+
+
+
+            })
+
+        
+        // select=$('<select>').attr('id','kind2')
+        // option1=$('<option>').attr('value','').html('--선택--')
+        
+        
+
+
+        })
+    </script>
+</head>
+<body>
+    <h1>점심메뉴</h1>
+    <select name="kind" id="kind">
+        <option value="">--선택--</option>
+        <option value="">한식</option>
+        <option value="">중식</option>
+        <option value="">양식</option>
+    </select>
+    <span id="food"></span>
+    
+</body>
+</html>
