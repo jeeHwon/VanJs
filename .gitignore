@@ -1,0 +1,19 @@
+jsp/board/.classpath
+jsp/board/.project
+jsp/board/.settings/.jsdtscope
+jsp/board/.settings/org.eclipse.jdt.core.prefs
+jsp/board/.settings/org.eclipse.wst.common.component
+jsp/board/.settings/org.eclipse.wst.common.project.facet.core.xml
+jsp/board/.settings/org.eclipse.wst.jsdt.ui.superType.container
+jsp/board/.settings/org.eclipse.wst.jsdt.ui.superType.name
+jsp/board/WebContent/layout.txt
+jsp/board/WebContent/META-INF/MANIFEST.MF
+jsp/board/WebContent/WEB-INF/lib/mysql-connector-java-5.1.40-bin.jar
+jsp/Servers/.project
+jsp/Servers/.settings/org.eclipse.wst.server.core.prefs
+jsp/Servers/Tomcat v9.0 Server at localhost-config/catalina.policy
+jsp/Servers/Tomcat v9.0 Server at localhost-config/catalina.properties
+jsp/Servers/Tomcat v9.0 Server at localhost-config/context.xml
+jsp/Servers/Tomcat v9.0 Server at localhost-config/server.xml
+jsp/Servers/Tomcat v9.0 Server at localhost-config/tomcat-users.xml
+jsp/Servers/Tomcat v9.0 Server at localhost-config/web.xml
