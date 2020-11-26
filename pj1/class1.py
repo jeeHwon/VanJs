@@ -104,34 +104,75 @@ class DBManeger:
         print('연결해제')
         self.con.close()
 
+    def makeDict(self):
+        # cur.description 커서 속성 [(컬럼명1, 데이터타입, 속성1...),(컬럼명2..)]
+        # print('self.cur.description',self.cur.description)
+        # for colinfo in self.cur.description:
+        #     print(colinfo[0])
+        # 위를 한줄요약 하면 아래 : comprehension
+        colnames = [colinfo[0] for colinfo in self.cur.description]    
+        # print(colnames) # ['NO', 'TITLE', 'RATING', 'REGDATE']
+        # print(cur.fetchall())
+        templist =[]
+        for datas in self.cur.fetchall():
+            # print(datas)
+            # print(colnames)
+            temp={}
+            for k, v in zip(colnames, datas):
+                temp[k] = v
+            templist.append(temp)
+        # print(templist)
+        return templist
+
+                
+        # def createRow(*arg):
+        #     print('createRow() 함수')
+        # return createRow()
+
         
     def selectAll(self):
         sql = "select * from webtoon order by no"
         self.cur.execute(sql)
-        rows = self.cur.fetchall()
-        for row in rows:
-            row = list(row)
-            print(row)
+        result = self.makeDict()
+        for row in result:
+            # print(row)
+            print(row['NO'],row['TITLE'],row['RATING'],row['REGDATE'])
+
+        # rows = self.cur.fetchall()
+        # for row in rows:
+        #     print(row[0],row[1],row[2],row[3])
+
 
     def selectJob(self):
         pass
-    
+
+
     def selectRating(self, rating):
         sql = "select * from webtoon where rating >={} order by no"
         self.cur.execute(sql.format(rating))
-        rows = self.cur.fetchall()
-        for row in rows:
-            row = list(row)
-            print(row)
+        result = self.makeDict()
+
+        for row in result:
+            # print(row)
+            print(row['NO'],row['TITLE'],row['RATING'],row['REGDATE'])
+
+        # rows = self.cur.fetchall()
+        # for row in rows:
+        #     row = list(row)
+        #     print(row)
 
     def insert(self, title, rating, regdate):
         sql = "insert into webtoon values (webtoon_seq.nextval,'{}','{}','{}') "
         self.cur.execute(sql.format(title, rating, regdate))
         self.con.commit()
+
+
     def update(self, rating, regdate):
         sql = "update webtoon set regdate='{}' where rating >={}"
         self.cur.execute(sql.format(regdate, rating))
         self.con.commit()
+
+        
     def delete(self, no):
         sql = "delete from webtoon where no={}"
         self.cur.execute(sql.format(no))
@@ -140,15 +181,17 @@ class DBManeger:
 
 o1 = DBManeger()
 # o1.insert('test', '3', '2020-11-25')
-o1.delete('862')
-o1.selectAll()
-# o1.selectRating(9.99)
+# o1.delete('862')
+# o1.selectAll()
+o1.selectRating(9.99)
 # o1.update('9.99', '2020.11.25')
 
-color = ['red', 'green', 'blue']
-fruit = ['apple', 'orange', 'grape']
-number = [1,2,3]
-for t in zip(color, fruit):
-    print(color, fruit)
-for t in zip(color, number):
-    print(color, number)
+# color = ['red', 'green', 'blue']
+# fruit = ['apple', 'orange', 'grape']
+# number = [1,2,3]
+# for t in zip(color, fruit):
+#     print(color, fruit)
+# for t in zip(color, number):
+#     print(color, number)
+# for c, f, n in zip(color, fruit, number):
+#     print(color, fruit, number)
