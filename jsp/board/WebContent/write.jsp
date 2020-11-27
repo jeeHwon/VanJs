@@ -47,17 +47,14 @@
 			<tr>
 				<td>작성자</td>
 				<td><input type="text" name="name"></td>
-				
 			</tr>
 			<tr>
 				<td>내용</td>
 				<td><textarea cols="40" rows="5" name="content"></textarea></td>
-				
 			</tr>
 			<tr>
 				<td>비밀번호</td>
 				<td><input type="password" name="pwd"></td>
-				
 			</tr>
 			<tr>
 				<td>비밀번호 확인</td>
@@ -65,19 +62,13 @@
 					<input type="password" name="pwd2" onkeyup="pwd_check(this.form)">
 					<span id="msg"></span>
 				</td>
-				
 			</tr>
 			<tr>
 				<td colspan="2" align="center">
 				<button id="btn">저장하기</button></td>
 			</tr>
-			
-		
 		</table>
-	
 	</form>
-		
-	
 
 </body>
 </html>

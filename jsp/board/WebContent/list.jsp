@@ -28,7 +28,7 @@
 <title>Insert title here</title>
 <style>
 td{
-	border: 1px solid #cccccc;
+	border:1px solid #cccccc;
 }
 
 </style>
@@ -45,24 +45,26 @@ td{
 	</tr>
 	<%
 	while(rs.next()){
-	
 	%>
 	<tr>
 		<td align="center"><%=rs.getString("name")%></td>
-		<td><%=rs.getString("title")%></td>
+		<td><a href="content.jsp?id=<%=rs.getString("id")%>"><%=rs.getString("title")%></a></td>
 		<td align="center"><%=rs.getString("hit")%></td>
 		<td align="center"><%=rs.getString("writeday")%></td>
-		
 	</tr>
 	<%
 	}
 	%>
-	
+	<tr>
+		<td colspan="4" align="center"><a href="write.jsp">글쓰기</a></td>
+	</tr>
 	</table>
-
+	
 
 </body>
 </html>
-
+<%
+stmt.close();
+%>
 
 

@@ -32,6 +32,8 @@
 	
 	//이동하고 싶은 문서
 	response.sendRedirect("list.jsp");
+	pstmt.close();
+	stmt.close();
 	
 %>
 
