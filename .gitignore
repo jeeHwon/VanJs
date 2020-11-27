@@ -17,3 +17,5 @@ jsp/Servers/Tomcat v9.0 Server at localhost-config/context.xml
 jsp/Servers/Tomcat v9.0 Server at localhost-config/server.xml
 jsp/Servers/Tomcat v9.0 Server at localhost-config/tomcat-users.xml
 jsp/Servers/Tomcat v9.0 Server at localhost-config/web.xml
+pj1/debug.log
+pj1/ghostdriver.log
